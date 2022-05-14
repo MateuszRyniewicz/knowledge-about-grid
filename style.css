@@ -13,21 +13,49 @@ body {
 	font-size: 3.6rem;
 }
 
-.grid-container {
+.wrapper {
+	margin: 50px;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 100px 500px 300px;
-	gap: 30px 100px;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 100px 100px 500px 100px;
 }
 
-.grid-item {
+.item {
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	background-color: #297ddf;
-	border: 3px solid black;
+	justify-content: center;
+	padding: 10px 20px;
+	text-transform: uppercase;
 }
 
-.grid-item:nth-child(even) {
-	background-color: #34e559;
+nav {
+	background-color: tomato;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+header {
+	background-color: gold;
+	grid-column: 1/3;
+	grid-row: 2/3;
+}
+
+main {
+	background-color: cornflowerblue;
+	grid-column: 1/2;
+	grid-row: 3/4;
+}
+
+aside {
+	background-color: slateblue;
+	grid-column: 2/3;
+	grid-row: 3;
+}
+
+footer {
+	background-color: greenyellow;
+	grid-column: 1/3;
+    grid-row: 4/5;
 }
