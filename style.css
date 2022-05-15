@@ -1,48 +1,51 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    height: 100vh;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #333;
-    font-size: 3.6rem;
+	height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #333;
+	font-size: 3.6rem;
 }
 
-
 .wrapper {
-    margin: 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 5fr 1fr;
+	margin: 50px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr 5fr 1fr;
+	grid-template-areas: 'nav nav nav' 'aside main main' 'footer footer footer';
 }
 
 .item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	border: 1px solid black;
 }
 
 nav {
-    background-color: cornflowerblue;
+	background-color: cornflowerblue;
+	grid-area: nav;
 }
 
 main {
-    background-color: slateblue;
-
+	background-color: slateblue;
+	grid-area: main;
 }
 
 aside {
-    background-color: teal;
+	background-color: teal;
+	grid-area: aside;
 }
 
 footer {
-  background-color: gold;
+	background-color: gold;
+	grid-area: footer;
 }
